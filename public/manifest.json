@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Autofill extension",
+  "version": "1.0.0",
+  "description": "POC for autofilling job applications",
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "Open Autofill Extension"
+  },
+  "content_scripts":[{
+    "js": ["assets/content.js"],
+    "matches": ["https://*/*"]
+  }],
+  "web_accessible_resources": [{
+      "matches": ["https://*/*"],
+      "resources": ["assets/*"]
+  }],
+  "permissions": ["scripting", "tabs", "activeTab", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "author": "Divya YK"
+}
