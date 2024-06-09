@@ -1,10 +1,12 @@
 const registerBackgroundEventListeners = () => {
-  chrome.webNavigation.onDOMContentLoaded.addListener((details) => {
-    console.log({ details }, "hello");
-  });
-
-  chrome.runtime.onMessage.addListener((message) => {
-    chrome.tabs.create({ url: message.url });
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    console.log({ request, sender, sendResponse });
+    chrome.windows.create({
+      url: chrome.runtime.getURL("https://amazon.in/"),
+      type: "popup",
+      width: 400,
+      height: 600,
+    });
   });
 };
 

@@ -29,9 +29,11 @@ const Homepage = () => {
   useEffect(() => {
     (async () => {
       const data = await chrome.storage.sync.get("profileData");
-      setInitialFormValues(JSON.parse(data.profileData));
-      profileForm.setValues(JSON.parse(data.profileData));
-      console.log({ profileData: data.profileData });
+      if (data) {
+        setInitialFormValues(JSON.parse(data.profileData));
+        profileForm.setValues(JSON.parse(data.profileData));
+        console.log({ profileData: data.profileData });
+      }
     })();
   }, []);
   return (
