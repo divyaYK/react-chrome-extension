@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# React Chrome Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Basic extension example for Chrome, works only on a workday job application.
 
-Currently, two official plugins are available:
+## Steps to install the extension
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Make sure you have node installed with version >= 18.
+2. Head to the root directory and run the following command:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Build the extension using the following command:
+
+```bash
+npm run build
+```
+
+4. Go to chrome://extensions and turn on the developer mode.
+5. Click on "Load Unpacked" button and select the `dist/` folder under the root directory.
+6. The extension will be available under the name "Autofill extension".
+7. Click on the extension and select "Click here to get started".
+8. Fill in your details and make sure the resume file is compressed, if you choose to upload.
+9. Open this [workday application link](https://medable.wd1.myworkdayjobs.com/en-US/explore-career-opportunities/job/United-Kingdom---Remote/VP--Strategic-Accounts_JR100019/apply/applyManually?source=LinkedIn) and create your account.
+10. Login and wait for the input fields to load (please select your country) and then click on "yes" button to test the extension.

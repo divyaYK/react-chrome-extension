@@ -8,7 +8,7 @@
     "build": "tsc && vite build --config vite.config.ts && vite build --config vite-content.config.ts && vite build --config vite-background.config.ts && vite build --config vite-ext-home.config.ts",
     "lint:fix": "eslint --fix . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\" --config ./.prettierrc",
+    "format": "prettier --write . --config ./.prettierrc",
     "lint-stage": "lint-staged"
   },
   "dependencies": {

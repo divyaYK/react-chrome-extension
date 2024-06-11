@@ -33,7 +33,7 @@ export const promptUser = () => {
   const promptComponent = document.createElement("div");
   promptComponent.setAttribute("id", "autofill-popup");
   promptComponent.innerHTML = `
-  <div style="background-color: white; color: black; display: flex; flex-direction: column; align-items: center; gap: 20px; min-height: 150px; min-width: 200px; position: absolute; right: 0; top: 0; padding: 20px; justify-content: center; border-bottom-left-radius: 20px; box-shadow: 14px -11px 10px 20px rgba(0, 0, 0, 0.2); box-sizing: border-box;">
+  <div style="background-color: white; color: black; display: flex; flex-direction: column; align-items: center; gap: 20px; min-height: 150px; min-width: 200px; position: absolute; right: 0; top: 0; padding: 20px; justify-content: center; border-bottom-left-radius: 20px; box-shadow: 14px -11px 10px 20px rgba(0, 0, 0, 0.2); box-sizing: border-box; z-index: 200;">
   <h4 style="font-size: 1rem;">Would you like us to autofill the form?</h4>
   <div style="display: flex; align-items: center; gap: 10px;">
     <button id="autofill-no" style="background-color: #228be6; color: #ffffff; display: inline-block; height: 30px; border: none; border-radius: 4px; padding: 5px 10px; width: 60px;">No</button>
