@@ -21,8 +21,9 @@ export interface IProfileFormValues {
   firstName?: string;
   lastName?: string;
   fullName?: string;
-  country?: string;
+  designation?: string;
   address?: {
+    country?: string;
     city?: string;
     postalCode?: string;
     addressLine?: string;

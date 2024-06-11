@@ -12,6 +12,7 @@ export const ProfileFormInitialValues = {
     city: "",
     postalCode: "",
     addressLine: "",
+    country: "",
   },
   workExperience: [
     {
